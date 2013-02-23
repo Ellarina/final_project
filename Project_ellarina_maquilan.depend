@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1360350410 source:c:\users\karolyn\desktop\data structure\project_ellarina_maquilan\project.cpp
+	"project.h"
+	<iostream>
+
+1360350862 c:\users\karolyn\desktop\data structure\project_ellarina_maquilan\project.h
+
+1360350862 source:c:\users\karolyn\desktop\data structure\project_ellarina_maquilan\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+	<string>
+
+1360912929 source:c:\documents and settings\jowel\desktop\mine\project\project.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<math.h>
+	<cstdlib>
+
+1360917816 c:\documents and settings\jowel\desktop\mine\project\project.h
+
+1360908242 source:c:\documents and settings\jowel\desktop\mine\project\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+	<string>
+
+1360850644 source:c:\users\rafael.school\desktop\project\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+	<string>
+
+1360933080 c:\users\rafael.school\desktop\project\project.h
+
+1360943893 source:c:\users\rafael.school\desktop\project\project.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<math.h>
+	<cstdlib>
+	<stdint.h>
+	<sstream>
+
+1361348619 source:c:\documents and settings\jowel\desktop\mine\project-master\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+	<string>
+
+1361529662 c:\documents and settings\jowel\desktop\mine\project-master\project.h
+
+1361524903 source:c:\documents and settings\jowel\desktop\mine\project-master\project.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<math.h>
+	<cstdlib>
+	<stdint.h>
+	<sstream>
+	<vector>
+
+1361529662 source:c:\documents and settings\jowel\desktop\final project\project.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<math.h>
+	<cstdlib>
+	<stdint.h>
+	<sstream>
+	<fstream>
+	<vector>
+
+1361608447 c:\documents and settings\jowel\desktop\final project\project.h
+
+1361348619 source:c:\documents and settings\jowel\desktop\final project\main.cpp
+	<iostream>
+	<cstdlib>
+	"project.h"
+	<string>
+
