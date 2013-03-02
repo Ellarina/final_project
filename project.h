@@ -1,5 +1,8 @@
 #ifndef PROJECT_H
 #define PROJECT_H
+#include <string>
+
+using namespace std;
 
 
 class project
@@ -27,8 +30,9 @@ class project
             void max_path_sum_one();
             void counting_sundays();
             void factorial_digit_sum();
-            void addPoints(int* point, int* numb);
-            void seive(int n);
+            void addPoints(int* point, int* numb);;
+            void name_scores();
+            int sum(string);
     protected:
     private:
 };

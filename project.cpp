@@ -11,6 +11,7 @@
 bool composite[MAX + 1];
 vector<int> primes;
 #define LIMIT	1000
+#include <algorithm>
 
 using namespace std;
 
@@ -478,48 +479,9 @@ void project::longest_collatz_sequence()
 
     cout<<"The starting number, under one million, \nthat produces the longest chain is "<<longestSeq<<endl;
 }
-void project::seive(int n)
-{
-	int	i, j;
 
-	for (i = 2; i * i <= n; i++)
-	{
-		if (composite[i])
-			continue;
-		for (j = 2 * i; j <= n; j += i)
-			composite[j] = 1;
-		primes.push_back(i);
-	}
-	for (; i <= n; i++)
-		if (!composite[i])
-			primes.push_back(i);
-}
 void project::diophantine_reciprocals_a()
 {
-    seive(MAX);
-	for (int N = 1000; N < MAX; N++)
-	{
-		if (!composite[N])
-			continue;
-		// Compute number of divsiors of N squared
-		int numdiv = 1, cn = N;
-		for (unsigned i = 0; 1 != cn && i < primes.size(); i++)
-		{
-			int	count = 0;
-			while (cn % primes[i] == 0)
-			{
-				cn /= primes[i];
-				count++;
-			}
-			numdiv *= (count * 2 + 1);
-		}
-		int ans = (numdiv + 1) / 2;
-		if (ans > LIMIT)
-		{
-			cout << N << endl;
-			break;
-		}
-	}
 
     cout<<"The least value of n for which the number of distinct\n solutions exceeds one-thousand is"<<endl;
 }
@@ -788,4 +750,46 @@ void project::factorial_digit_sum()
     sum += array[i];
 
     cout<<"The sum of the digits in the number 100! is "<<sum<<endl;
+}
+void project::name_scores()
+{
+    long int total = 0;
+    int count = 0;
+    char ch;
+    ifstream fi;
+    vector<string> v;
+
+    fi.open ("names.txt");
+
+    while (!fi.eof ())
+    {
+        v.resize (v.size () + 1);
+        count = 0;
+        ch = fi.get ();
+        while (ch != ',' && !fi.eof ())
+        {
+            v[v.size () - 1] += ch;
+            ch = fi.get ();
+            count++;
+        }
+    }
+
+    sort (v.begin (), v.end ());
+
+    for (unsigned int i = 0; i < v.size (); i++)
+        total += (i + 1) * sum (v[i]);
+
+    fi.close ();
+
+    cout<<"The total of all the name scores in the file is "<< total <<endl;
+}
+int project::sum(string str)
+{
+    int total = 0;
+
+    for (unsigned int i = 0; i < str.size (); i++)
+        if (isalpha (str[i]))
+            total += tolower (str[i]) - 96;
+
+    return total;
 }

@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cstdlib>
+#include <iostream>
 #include "project.h"
 #include <string>
 
@@ -8,8 +8,8 @@ using namespace std;
 const string Problems[]={"Multiples of 3 and 5", "Even Fibonacci numbers", "Largest prime factor", "Largest palindrome product", "Smallest Multiple"
                         , "Sum square difference", "10001st prime", "Largest product in a series", "Special pythagorean triplet", "Summation of primes"
                         , "Largest product in a grid", "Highly divisible triangular number", "Largest sum", "Longest collatz sequence", "Diophantine reciprocals A"
-                        , "Power digit sum", "Number letter counts", "Maximum path sum I", "Counting sundays", "Factorial digit sum", "Exit"};
-const int NUM_PROBLEMS=20;
+                        , "Power digit sum", "Number letter counts", "Maximum path sum I", "Counting sundays", "Factorial digit sum", "Names Scores", "Exit"};
+const int NUM_PROBLEMS=21;
 const int EXIT=NUM_PROBLEMS+1;
 
 int main()
@@ -107,6 +107,10 @@ int main()
 
             case 20:
                 proj.factorial_digit_sum();
+                break;
+
+            case 21:
+                proj.name_scores();
                 break;
 
             case EXIT:
