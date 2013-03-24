@@ -33,6 +33,12 @@ class project
             void addPoints(int* point, int* numb);;
             void name_scores();
             int sum(string);
+            void first_1000_digit_fibonacci();
+            void truncatable_primes();
+            bool isPrime(int n);
+            int solve();
+
+
     protected:
     private:
 };

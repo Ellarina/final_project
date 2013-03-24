@@ -793,3 +793,87 @@ int project::sum(string str)
 
     return total;
 }
+typedef long double BigNum;
+void project::first_1000_digit_fibonacci()
+{
+    BigNum last = 1;
+    BigNum current = 1;
+    int term = 2;
+    bool error = false;
+    int n = 0;
+
+    while ( n < 1000 )
+    {
+        n = 1;
+        BigNum fibbonacci = last + current;
+        BigNum num = fibbonacci;
+        while ( num > 10.0 )
+        {
+            num *= 0.1f;
+            ++n;
+        }
+        last = current;
+        current = fibbonacci;
+        ++term;
+    }
+
+    cout<<"The first term in the Fibonacci sequence to contain 1000 digits is "<< term <<endl;
+}
+void project::truncatable_primes()
+{
+    cout<<"The sum of the only eleven primes that are truncatable is " << solve()<< endl;
+}
+bool project::isPrime(int n)
+{
+    int max = (int)(sqrt((double)n));
+    for (int i = 2; i <= max; ++i)
+    {
+        if (n % i == 0) return false;
+    }
+    return n >= 2;
+}
+int project::solve()
+{
+    int num = 0;
+    int sum = 0;
+    for (int i = 10; ; ++i)
+        {
+        int len = 0;
+        {
+            bool b = true;
+            int number = i;
+            while (true)
+            {
+                if (!isPrime(number))
+                {
+                    b = false;
+                    break;
+                }
+                len++;
+                number /= 10;
+                if (number == 0) break;
+            }
+            if (!b) continue;
+        }
+        {
+            bool b = true;
+            int number = i;
+            while (true)
+            {
+                number %= (int)pow(10.0, (double)(len - 1));
+                if (!isPrime(number))
+                {
+                    b = false;
+                    break;
+                }
+                len--;
+                if (len == 1) break;
+            }
+            if (!b) continue;
+        }
+        sum += i;
+        num++;
+        if (num >= 11) break;
+    }
+    return sum;
+}

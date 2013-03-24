@@ -8,8 +8,8 @@ using namespace std;
 const string Problems[]={"Multiples of 3 and 5", "Even Fibonacci numbers", "Largest prime factor", "Largest palindrome product", "Smallest Multiple"
                         , "Sum square difference", "10001st prime", "Largest product in a series", "Special pythagorean triplet", "Summation of primes"
                         , "Largest product in a grid", "Highly divisible triangular number", "Largest sum", "Longest collatz sequence", "Diophantine reciprocals A"
-                        , "Power digit sum", "Number letter counts", "Maximum path sum I", "Counting sundays", "Factorial digit sum", "Names Scores", "Exit"};
-const int NUM_PROBLEMS=21;
+                        , "Power digit sum", "Number letter counts", "Maximum path sum I", "Counting sundays", "Factorial digit sum", "Names Scores", "1000 digit Fibonacci number", "Truncatable primes", "Exit"};
+const int NUM_PROBLEMS=23;
 const int EXIT=NUM_PROBLEMS+1;
 
 int main()
@@ -111,6 +111,14 @@ int main()
 
             case 21:
                 proj.name_scores();
+                break;
+
+            case 22:
+                proj.first_1000_digit_fibonacci();
+                break;
+
+            case 23:
+                proj.truncatable_primes();
                 break;
 
             case EXIT:
